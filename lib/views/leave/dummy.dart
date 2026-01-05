@@ -305,36 +305,36 @@ class _DummyScreenState extends State<DummyScreen> {
         'label': 'Change Password',
         'color': Colors.deepOrange
       },
-            {
-        'icon': Icons.airplane_ticket,
-        'label': 'AirTicket Request',
-        'color': Colors.deepPurple
-      },
-      {
-        'icon': Icons.how_to_reg,
-        'label': 'Daily Attendance',
-        'color': Colors.green
-      },
-      {
-        'icon': Icons.flight,
-        'label': 'Passport Request',
-        'color': Colors.blueAccent
-      },
-      {
-        'icon': Icons.receipt_long,
-        'label': 'Memo Request',
-        'color': Colors.teal
-      },
-      {
-        'icon': Icons.edit_calendar,
-        'label': 'Attendance Reqularization',
-        'color': Colors.indigo
-      },
-      {
-        'icon': Icons.account_balance,
-        'label': 'LoanRequest',
-        'color': Colors.deepOrange
-      },
+      //       {
+      //   'icon': Icons.airplane_ticket,
+      //   'label': 'AirTicket Request',
+      //   'color': Colors.deepPurple
+      // },
+      // {
+      //   'icon': Icons.how_to_reg,
+      //   'label': 'Daily Attendance',
+      //   'color': Colors.green
+      // },
+      // {
+      //   'icon': Icons.flight,
+      //   'label': 'Passport Request',
+      //   'color': Colors.blueAccent
+      // },
+      // {
+      //   'icon': Icons.receipt_long,
+      //   'label': 'Memo Request',
+      //   'color': Colors.teal
+      // },
+      // {
+      //   'icon': Icons.edit_calendar,
+      //   'label': 'Attendance Reqularization',
+      //   'color': Colors.indigo
+      // },
+      // {
+      //   'icon': Icons.account_balance,
+      //   'label': 'Loan Request',
+      //   'color': Colors.deepOrange
+      // },
     ];
 
     return Container(
