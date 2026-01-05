@@ -53,8 +53,8 @@ class _LoginPageState extends State<LoginPage> {
                     const Color(0xFF2C2C2C),
                   ]
                 : [
-                    Appcolor.whiteShade1,
-                    Appcolor.whiteShade2,
+                    Appcolor.kwhite,
+                    Appcolor.kwhite,
                   ],
           ),
         ),
