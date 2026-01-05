@@ -50,25 +50,25 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyBS6V1X_t2lrlSTmQli0N9IZMS_2vdeA08',
     appId: '1:29110606374:web:b11780505799f2b34a64e7',
     messagingSenderId: '29110606374',
-    projectId: 'alsaqr-f47a1',
-    authDomain: 'alsaqr-f47a1.firebaseapp.com',
-    storageBucket: 'alsaqr-f47a1.firebasestorage.app',
+    projectId: 'alfareedaanaf-f47a1',
+    authDomain: 'alfareedaanaf-f47a1.firebaseapp.com',
+    storageBucket: 'alfareedaanaf-f47a1.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCyCTsvtnIhZV9C_XrOooCWyLGokLiJKa4',
     appId: '1:29110606374:android:0d3c6e67318c954d4a64e7',
     messagingSenderId: '29110606374',
-    projectId: 'alsaqr-f47a1',
-    storageBucket: 'alsaqr-f47a1.firebasestorage.app',
+    projectId: 'alfareedaanaf-f47a1',
+    storageBucket: 'alfareedaanaf-f47a1.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDxL51DXPK40JOaFH1LM8-nLMaa9RkmH-E',
     appId: '1:29110606374:ios:bc3e1f932f4095c24a64e7',
     messagingSenderId: '29110606374',
-    projectId: 'alsaqr-f47a1',
-    storageBucket: 'alsaqr-f47a1.firebasestorage.app',
-    iosBundleId: 'com.nijatech.alsaqr',
+    projectId: 'alfareedaanaf-f47a1',
+    storageBucket: 'alfareedaanaf-f47a1.firebasestorage.app',
+    iosBundleId: 'com.nijatech.alfareedaanaf',
   );
 }

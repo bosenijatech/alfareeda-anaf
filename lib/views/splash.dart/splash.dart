@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
           alignment: Alignment.center,
           children: [
             Image(
-              image: AssetImage("assets/images/alsaqrlogo.jpeg"),
+              image: AssetImage("assets/images/alfareedaanaflogo.jpg"),
               height: 100,
               width: 100,
               fit: BoxFit.fill,
@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Align(
               alignment: Alignment(0.0, 1.0),
               child: Text(
-                "Al Saqr",
+                "AL Fareeda Anaf",
                 textAlign: TextAlign.start,
                 overflow: TextOverflow.clip,
                 style: TextStyle(

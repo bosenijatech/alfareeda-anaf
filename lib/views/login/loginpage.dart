@@ -69,12 +69,13 @@ class _LoginPageState extends State<LoginPage> {
                   width: 150,
                   height: 150,
                   decoration: BoxDecoration(
-                    color: theme.colorScheme.primary.withOpacity(0.1),
+                    // color: theme.colorScheme.primary.withOpacity(0.1),
+                    color: Colors.transparent,
                     shape: BoxShape.circle,
                   ),
                   padding: const EdgeInsets.all(12),
                   child: Image.asset(
-                    'assets/images/alsaqrlogo.jpeg',
+                    'assets/images/alfareedaanaflogo.jpg',
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -90,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Text(
-                  "Sign in to your Al Saqr account",
+                  "Sign in to your AL Fareeda Anaf account",
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: isDark
                         ? Colors.white70
@@ -186,7 +187,7 @@ class _LoginPageState extends State<LoginPage> {
             
                 // 📝 Footer
                 Text(
-                  "© 2025 Al Saqr. All rights reserved.",
+                  "© 2025 AL Fareeda Anaf. All rights reserved.",
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: isDark ? Colors.white54 : Appcolor.primarycolor,
                   ),

@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "29110606374",
-    "project_id": "alsaqr-f47a1",
-    "storage_bucket": "alsaqr-f47a1.firebasestorage.app"
+    "project_id": "alfareedaanaf-f47a1",
+    "storage_bucket": "alfareedaanaf-f47a1.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:29110606374:android:0d3c6e67318c954d4a64e7",
         "android_client_info": {
-          "package_name": "com.nijatech.alsaqr"
+          "package_name": "com.nijatech.alfareedaanaf"
         }
       },
       "oauth_client": [],

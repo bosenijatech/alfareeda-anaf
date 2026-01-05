@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.alsaqr"
+    namespace = "com.example.alfareedaanaf"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -20,7 +20,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.alsaqr"
+        applicationId = "com.example.alfareedaanaf"
 
         // 🔴 REQUIRED for firebase_messaging
         minSdk = 23
