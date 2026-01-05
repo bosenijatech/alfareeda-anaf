@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:mime/mime.dart';
 
 class AppConstants {
-  static String apiBaseUrl = 'https://mobapp.nijatech.com:5606/';
+  static String apiBaseUrl = 'https://mobapp.nijatech.com:5607/';
   //static String apiBaseUrl = 'http://192.168.0.101:4000/';
 
   static const String androidAppPackageName = "com.nijatech.alfareedaanaf";
