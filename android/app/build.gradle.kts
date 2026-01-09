@@ -23,7 +23,7 @@ android {
         applicationId = "com.example.alfareedaanaf"
 
         // 🔴 REQUIRED for firebase_messaging
-        minSdk = 23
+        minSdk = flutter.minSdkVersion
 
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

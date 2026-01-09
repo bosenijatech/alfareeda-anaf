@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   bool _isLoading = false;
   bool _obscureText = true;
   LoginModel loginModel = LoginModel();
-
+  DateTime now = DateTime.now();
   @override
   void dispose() {
     _emailController.dispose();
@@ -62,9 +62,10 @@ class _LoginPageState extends State<LoginPage> {
           child: Padding(
             padding: EdgeInsetsGeometry.all(16),
             child: Column(
-              
               children: [
-                SizedBox(height: 100,),
+                SizedBox(
+                  height: 100,
+                ),
                 Container(
                   width: 150,
                   height: 150,
@@ -80,7 +81,9 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 20),
-             SizedBox(height: 100,),
+                SizedBox(
+                  height: 100,
+                ),
                 // 🌗 Title + Subtitle
                 Text(
                   "Welcome Back",
@@ -91,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Text(
-                  "Sign in to your AL Fareeda Anaf account",
+                  "Sign in to your Nijatech account",
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: isDark
                         ? Colors.white70
@@ -99,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 35),
-            
+
                 // 📧 Email Field
                 TextField(
                   controller: _emailController,
@@ -110,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 15),
-            
+
                 // 🔒 Password Field
                 TextField(
                   controller: _passwordController,
@@ -132,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 10),
-            
+
                 // 🔗 Forgot Password
                 // Align(
                 //   alignment: Alignment.centerRight,
@@ -148,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                 //   ),
                 // ),
                 const SizedBox(height: 20),
-            
+
                 // 🚪 Login Button
                 SizedBox(
                   width: double.infinity,
@@ -184,10 +187,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 25),
-            
+
                 // 📝 Footer
                 Text(
-                  "© 2025 AL Fareeda Anaf. All rights reserved.",
+                  "© ${now.year} Alfareeda ANAF. All rights reserved.",
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: isDark ? Colors.white54 : Appcolor.primarycolor,
                   ),

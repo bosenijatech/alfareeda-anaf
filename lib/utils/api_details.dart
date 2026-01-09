@@ -22,7 +22,7 @@ class ApiDetails {
 
   static const String addbioattendance = 'api/mobileapp/addattendance';
 
-  static const String applyleave = 'api/mobileapp/applyempleave';
+  static const String applyleave = 'api/mobileapp/applyempleavenew';
 
   static const String viewleave = 'api/mobileapp/viewempleave';
 
