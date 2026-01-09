@@ -7,8 +7,7 @@ import 'package:mime/mime.dart';
 
 class AppConstants {
   static String apiBaseUrl = 'https://mobapp.nijatech.com:5607/';
-  //static String apiBaseUrl = 'http://192.168.0.101:4000/';
-
+  
   static const String androidAppPackageName = "com.nijatech.alfareedaanaf";
   static const String iOSAppID = "6738953923";
 
@@ -40,7 +39,7 @@ class AppConstants {
     }
   }
 
-  static convertdateformat1(from) {
+  static  convertdateformat1(from) {
     if (from.toString().isNotEmpty) {
       String concatefrom = '$from';
 

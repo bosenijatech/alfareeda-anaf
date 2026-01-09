@@ -6,8 +6,6 @@ import 'views/assetrequest/viewassets.dart';
 import 'views/attendance/attendance_history.dart';
 import 'views/attendance/view_attendance.dart';
 import 'views/changepassword/changepassword.dart';
-import 'views/dutytravel/dutytravelapply.dart';
-import 'views/dutytravel/dutytraveldetail.dart';
 import 'views/grievances/applygrievance.dart';
 import 'views/landingpage/teammets.dart';
 import 'views/leave/applycompoffpage.dart';
@@ -26,10 +24,9 @@ import 'views/reimbursement/reimbursementdetails.dart';
 import 'views/rejoin/rejointab.dart';
 import 'views/splash.dart/splash.dart';
 
-
 class Routes {
   static Route<dynamic> generateRoutes(RouteSettings settings) {
-  //  final args = settings.arguments;
+    //  final args = settings.arguments;
     switch (settings.name) {
       case (RouteNames.splashscreen):
         return MaterialPageRoute(
@@ -85,12 +82,7 @@ class Routes {
         return MaterialPageRoute(
             builder: (BuildContext context) => const LetterApplyPage());
       //Duty Travel
-      case (RouteNames.dutytravelview):
-        return MaterialPageRoute(
-            builder: (BuildContext context) => const DutyTravelDetailsPage());
-      case (RouteNames.dutytravelapply):
-        return MaterialPageRoute(
-            builder: (BuildContext context) => const DutyTravelApplyPage());
+
       //REIM APPLY
       case (RouteNames.reimview):
         return MaterialPageRoute(

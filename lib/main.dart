@@ -1,4 +1,5 @@
-
+import 'package:alfareedaanaf/firebase_options.dart';
+import 'package:alfareedaanaf/services/notificationservice.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -13,16 +14,17 @@ import 'views/themes/themes.dart';
 import 'views/widgets/custom_widgets.dart';
 import 'views/widgets/network_status_service.dart';
 
+
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 IdleTimeoutService idleService = IdleTimeoutService();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Firebase
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
-  // await NotificationService().initFCM();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await NotificationService().initFCM();
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return CustomErrorWidget(errorMessage: details.exceptionAsString());
@@ -54,9 +56,7 @@ class _MyAppState extends State<MyApp> {
             initialData: NetworkStatus.online,
           ),
         ],
-        child: 
-        MaterialApp(
-          
+        child: MaterialApp(
           navigatorKey: navigatorKey,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.lightTheme,
@@ -64,7 +64,6 @@ class _MyAppState extends State<MyApp> {
           initialRoute: RouteNames.splashscreen,
           onGenerateRoute: Routes.generateRoutes,
           debugShowCheckedModeBanner: false,
-        )
-        );
+        ));
   }
 }

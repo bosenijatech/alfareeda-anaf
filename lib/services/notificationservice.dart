@@ -1,10 +1,8 @@
 import 'dart:io';
-
+import 'package:alfareedaanaf/main.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
-import '../main.dart';
 
 class NotificationService {
   final FirebaseMessaging _messaging = FirebaseMessaging.instance;
@@ -158,14 +156,14 @@ class NotificationService {
     if (route == null || route.isEmpty) return;
 
     switch (route) {
-      case 'leaveApproval':
-        break;
-      case 'waitingApproval':
-        navigatorKey.currentState?.pushNamed('/waitingApproval');
-        break;
-      case 'otherPage':
-        navigatorKey.currentState?.pushNamed('/otherPage');
-        break;
+      //   case 'leaveApproval':
+      //     break;
+      //   case 'waitingApproval':
+      //     navigatorKey.currentState?.pushNamed('/waitingApproval');
+      //     break;
+      //   case 'otherPage':
+      //     navigatorKey.currentState?.pushNamed('/otherPage');
+      //     break;
       default:
         navigatorKey.currentState?.pushNamed('/');
     }

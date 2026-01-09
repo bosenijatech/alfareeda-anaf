@@ -1,4 +1,3 @@
-
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -91,8 +90,6 @@ class _LeaveApplyPageState extends State<LeaveApplyPage> {
 
   @override
   void initState() {
-   
-
     super.initState();
   }
 
@@ -183,8 +180,8 @@ class _LeaveApplyPageState extends State<LeaveApplyPage> {
             key: leaveTypekey,
             selectedItem: selectedLeaveType,
             popupProps: const PopupProps.menu(showSearchBox: true),
-            asyncItems: (String filter) => ApiService.getleaveType(
-                filter: filter, excludeLeaveTypeId: "4"),
+            asyncItems: (String filter) =>
+                ApiService.getleaveType(filter: filter, type: "normal"),
             itemAsString: (LeaveTypeModel item) =>
                 item.leaveTypeName.toString(),
             onChanged: (LeaveTypeModel? item) async {
@@ -527,7 +524,8 @@ class _LeaveApplyPageState extends State<LeaveApplyPage> {
               } else if (reasoncontroller.text.isEmpty) {
                 AppUtils.showSingleDialogPopup(context, "Please Enter Reason",
                     "Ok", onexitpopup, AssetsImageWidget.warningimage);
-              } else if (alterleavetypecode.toString() == "2" &&
+              }
+              /*else if (alterleavetypecode.toString() == "4" &&
                   noofdays! >= 2 &&
                   attachlist.isEmpty) {
                 AppUtils.showSingleDialogPopup(
@@ -536,7 +534,8 @@ class _LeaveApplyPageState extends State<LeaveApplyPage> {
                     "Ok",
                     onexitpopup,
                     AssetsImageWidget.warningimage);
-              } else if (attachlist.isEmpty) {
+              } */
+              else if (attachlist.isEmpty) {
                 attachlist.clear();
                 onpostleave();
               } else {
@@ -814,8 +813,6 @@ class _LeaveApplyPageState extends State<LeaveApplyPage> {
     subfrmdatecontroller.clear();
     subtodatecontroller.clear();
   }
-
-  
 
   void onrefreshscreen() {
     Navigator.of(context).pop();

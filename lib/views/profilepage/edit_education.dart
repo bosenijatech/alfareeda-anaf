@@ -580,40 +580,6 @@ class _EditEducationState extends State<EditEducation> {
     }
   }
 
-  // geteducationdetailsdata() async {
-  //   setState(() {
-  //     loading = true;
-  //   });
-  //   try {
-  //     ApiService.getEducation().then((response) {
-  //       setState(() {
-  //         loading = false;
-  //       });
-  //       if (response.statusCode == 200) {
-  //         educationModel =
-  //             EducationModel.fromJson(json.decode(json.decode(response.body)));
-  //         educationlist.clear();
-  //         for (int i = 0; i < educationModel.empEducationList!.length; i++) {
-  //           educationlist
-  //               .add(educationModel.empEducationList![i].name.toString());
-  //         }
-  //         //log(b['currentPage'].toString());
-  //       } else {
-  //         AppUtils.showSingleDialogPopup(
-  //             context,
-  //             json.decode(json.decode(response.body)),
-  //             "Ok",
-  //             onexitpopup,
-  //             AssetsImageWidget.errorimage);
-  //       }
-  //     });
-  //   } on Exception catch (_) {
-  //     setState(() {
-  //       loading = false;
-  //     });
-  //     rethrow;
-  //   }
-  // }
   void geteducationdetailsdata() async {
     if (!mounted) return;
     setState(() {

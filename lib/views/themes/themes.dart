@@ -153,10 +153,7 @@
 //   // );
 // }
 
-
-
 import 'package:flutter/material.dart';
-
 
 import '../../utils/appcolor.dart';
 
@@ -188,15 +185,17 @@ class AppTheme {
       iconTheme: IconThemeData(color: Colors.black87),
     ),
 
-    // 🧾 Card
-  cardTheme: CardThemeData(
-  color: Colors.white,
-  elevation: 2,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(10),
-  ),
-),
-
+    // 🧾 Card/
+    cardColor: Colors.white,
+    cardTheme: CardThemeData(
+      color: Colors.white,
+      shadowColor: Colors.white,
+      surfaceTintColor: Colors.white,
+      elevation: 2,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
 
     // 📝 Text Theme
     textTheme: const TextTheme(
@@ -251,6 +250,7 @@ class AppTheme {
     scaffoldBackgroundColor: const Color(0xFF121212),
 
     // 🔝 AppBar
+    cardColor: const Color(0xFF1E1E1E),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFF1F1F1F),
       foregroundColor: Colors.white,
@@ -264,14 +264,13 @@ class AppTheme {
     ),
 
     // 🧾 Card
- cardTheme: CardThemeData(
-  color: const Color(0xFF1E1E1E),
-  elevation: 1,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(10),
-  ),
-),
-
+    cardTheme: CardThemeData(
+      color: const Color(0xFF1E1E1E),
+      elevation: 1,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
 
     // 📝 Text Theme
     textTheme: const TextTheme(

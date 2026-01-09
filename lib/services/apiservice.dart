@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 
-
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
@@ -56,8 +55,6 @@ class ApiService {
             );
     return response;
   }
-
-
 
   static Future<http.Response> getemployeedetailsdata() async {
     var url = Uri.parse(AppConstants.apiBaseUrl + ApiDetails.getProfile);
@@ -1417,12 +1414,14 @@ class ApiService {
 
   static Future<List<LeaveTypeModel>> getleaveType({
     String filter = "",
-    String excludeLeaveTypeId = "4",
+    String? type,
   }) async {
     final response = await http.get(
-      Uri.parse("${AppConstants.apiBaseUrl}api/mobileapp/getleavetype").replace(
+      Uri.parse("${AppConstants.apiBaseUrl}api/mobileapp/getleavetypenew")
+          .replace(
         queryParameters: {
           "empId": Prefs.getNsID('nsid').toString(),
+          "type": type
         },
       ),
       headers: {
@@ -1457,15 +1456,12 @@ class ApiService {
       final allLeaveTypes =
           (leaveTypes as List).map((e) => LeaveTypeModel.fromJson(e)).toList();
 
-      // ✅ Filter logic:
-      //    - Exclude leavetypeid = 4
-      //    - Optional name filter
       final filtered = allLeaveTypes.where((item) {
         final matchesName = filter.isEmpty ||
             item.leaveTypeName.toLowerCase().contains(filter.toLowerCase());
-        final notExcluded =
-            item.leaveTypeId.toString() != excludeLeaveTypeId.toString();
-        return matchesName && notExcluded;
+        // final notExcluded =
+        //     item.leaveTypeId.toString() != excludeLeaveTypeId.toString();
+        return matchesName;
       }).toList();
 
       return filtered;
@@ -1476,9 +1472,11 @@ class ApiService {
 
   static Future<List<LeaveTypeModel>> getleaveTypeComp() async {
     final response = await http.get(
-      Uri.parse("${AppConstants.apiBaseUrl}api/mobileapp/getleavetype").replace(
+      Uri.parse("${AppConstants.apiBaseUrl}api/mobileapp/getleavetypenew")
+          .replace(
         queryParameters: {
           "empId": Prefs.getNsID('nsid').toString(),
+          "comp": "compoff"
         },
       ),
       headers: {
@@ -1505,14 +1503,14 @@ class ApiService {
       final allLeaveTypes =
           (leaveTypes as List).map((e) => LeaveTypeModel.fromJson(e)).toList();
 
-      // ✅ Filter only leavetypeid == 4
-      final filtered = allLeaveTypes
-          .where((item) => item.leaveTypeId.toString() == "4")
-          .toList();
+      // // ✅ Filter only leavetypeid == 4
+      // final filtered = allLeaveTypes
+      //     .where((item) => item.leaveTypeId.toString() == "4")
+      //     .toList();
 
-      print(
-          "✅ Found ${filtered.length} leaveTypeId=4 (using nsId=${Prefs.getNsID(SharefprefConstants.sharednsid)})");
-      return filtered;
+      // print(
+      //     "✅ Found ${filtered.length} leaveTypeId=4 (using nsId=${Prefs.getNsID(SharefprefConstants.sharednsid)})");
+      return allLeaveTypes;
     } else {
       throw Exception("Failed to load leave types");
     }

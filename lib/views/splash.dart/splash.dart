@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-
 import '../../services/pref.dart';
 import '../../utils/appcolor.dart';
 import '../../utils/sharedprefconstants.dart';

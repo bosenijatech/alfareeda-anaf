@@ -1,10 +1,7 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../models/viewlettermodel.dart';
 import '../../routenames.dart';
@@ -291,10 +288,8 @@ class _ViewLetterDetailsPageState extends State<ViewLetterDetailsPage> {
               ],
             ),
 
-            const SizedBox(height: 10),
             Divider(color: theme.dividerColor.withOpacity(0.3)),
 
-            const SizedBox(height: 8),
             _infoRow(context, "Letter Type", item.lettertypename ?? "-"),
             _infoRow(context, "Address To", item.letteraddresstoname ?? "-"),
             _infoRow(context, "Copy To", item.copyTypeName ?? "-"),
