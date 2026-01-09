@@ -1470,13 +1470,13 @@ class ApiService {
     }
   }
 
-  static Future<List<LeaveTypeModel>> getleaveTypeComp() async {
+  static Future<List<LeaveTypeModel>> getleaveTypeComp(String type) async {
     final response = await http.get(
       Uri.parse("${AppConstants.apiBaseUrl}api/mobileapp/getleavetypenew")
           .replace(
         queryParameters: {
           "empId": Prefs.getNsID('nsid').toString(),
-          "comp": "compoff"
+          "type": type
         },
       ),
       headers: {

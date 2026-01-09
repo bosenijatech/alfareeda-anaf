@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -279,11 +278,11 @@ class _DummyScreenState extends State<DummyScreen> {
         'label': 'Pay Slip',
         'color': Colors.green
       },
-      {
-        'icon': Icons.account_balance_wallet_rounded,
-        'label': 'HR Expenses',
-        'color': Colors.deepPurple
-      },
+      // {
+      //   'icon': Icons.account_balance_wallet_rounded,
+      //   'label': 'HR Expenses',
+      //   'color': Colors.deepPurple
+      // },
       {'icon': Icons.group, 'label': 'Team', 'color': Colors.redAccent},
       {
         'icon': Icons.devices_other,
@@ -374,7 +373,7 @@ class _DummyScreenState extends State<DummyScreen> {
                 RouteNames.viewleave,
                 RouteNames.viewletter,
                 RouteNames.payslip,
-                RouteNames.reimview,
+                //RouteNames.reimview,
                 RouteNames.myteam,
                 RouteNames.viewasset,
                 RouteNames.viewcompoffleave,

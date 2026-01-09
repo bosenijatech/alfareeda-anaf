@@ -159,7 +159,7 @@ class _CompOffApplyPageState extends State<CompOffApplyPage> {
             ),
             asyncItems: (String filter) async {
               // ✅ Fetch filtered data (only leavetypeid=4 for this employee)
-              final result = await ApiService.getleaveTypeComp();
+              final result = await ApiService.getleaveTypeComp("compoff");
               return result;
             },
             itemAsString: (LeaveTypeModel item) =>

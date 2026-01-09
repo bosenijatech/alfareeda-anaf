@@ -629,20 +629,20 @@ class _ProfilePageState extends State<ProfilePage>
                       const SizedBox(
                         height: 15,
                       ),
-                      AppUtils.buildNormalText(
-                          text: "SUB BAND", fontSize: 12, color: labelColor),
-                      const SizedBox(height: 5),
-                      AppUtils.buildNormalText(
-                          text: empinfomodel.message != null &&
-                                  empinfomodel.message!.subBand.toString() !=
-                                      "null"
-                              ? empinfomodel.message!.subBand.toString()
-                              : "-",
-                          fontSize: 14,
-                          color: textColor),
-                      const SizedBox(
-                        height: 15,
-                      ),
+                      // AppUtils.buildNormalText(
+                      //     text: "SUB BAND", fontSize: 12, color: labelColor),
+                      // const SizedBox(height: 5),
+                      // AppUtils.buildNormalText(
+                      //     text: empinfomodel.message != null &&
+                      //             empinfomodel.message!.subBand.toString() !=
+                      //                 "null"
+                      //         ? empinfomodel.message!.subBand.toString()
+                      //         : "-",
+                      //     fontSize: 14,
+                      //     color: textColor),
+                      // const SizedBox(
+                      //   height: 15,
+                      // ),
                       AppUtils.buildNormalText(
                           text: "MOBILE NO", fontSize: 12, color: labelColor),
                       const SizedBox(height: 5),
